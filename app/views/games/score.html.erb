@@ -1,0 +1,12 @@
+<h1>Your Score</h1>
+
+<p>Your word: <%= @word %></p>
+<p>Letters in grid:</p>
+<% @letters.each do |letter| letter %>
+<div class="inline-block"><%= letter %></div>
+<% end %>
+
+<p>Your score: <div  id="score"><%= @result[:score] %></div></p>
+<p id="message"><%= @result[:message] %></p>
+
+<%= link_to 'Play again!', '/new' %>
